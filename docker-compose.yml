@@ -1,0 +1,31 @@
+version: "3.8"
+services:
+  npu-passthrough-on-nxp-imx:
+    container_name: npu-passthrough-on-nxp-imx
+    image: harbor.edgesync.cloud/nagarro-container-images/npu-passthrough-on-nxp-imx:v1
+    privileged: true
+    environment:
+      - DISPLAY=${DISPLAY}
+      - XAUTHORITY=/root/.Xauthority
+      - XDG_RUNTIME_DIR=/run/user/0
+      - DEBIAN_FRONTEND=noninteractive
+      - EI_TFLITE_DELEGATE=npu
+      - LD_LIBRARY_PATH=/usr/lib/eiq:/usr/lib
+    working_dir: /workspace
+    devices:
+      - /dev:/dev
+    volumes:
+      - ./wise-bench.sh:/workspace/wise-bench.sh
+      - $HOME/.Xauthority:/root/.Xauthority:rw
+      - /etc/nnstreamer.ini:/etc/nnstreamer.ini
+      - /sys/kernel/debug:/sys/kernel/debug
+      - /usr/share/X11:/usr/share/X11
+      - /lib/firmware:/lib/firmware
+      - /lib/libtinfo.so.5:/lib/libtinfo.so.5
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /run/user/0:/run/user/0
+    entrypoint: ["/bin/bash"]
+    network_mode: host
+    stdin_open: true
+    tty: true
+    restart: always
