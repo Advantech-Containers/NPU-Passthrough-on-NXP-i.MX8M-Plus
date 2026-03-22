@@ -1,4 +1,4 @@
-# NPU Passthrough on NXP i.MX
+# NPU Passthrough on NXP i.MX8M Plus
 
 **Version:** 1.0
 **Release Date:** Aug 2025  
