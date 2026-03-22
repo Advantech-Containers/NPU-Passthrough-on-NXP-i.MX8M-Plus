@@ -26,7 +26,7 @@ The `NPU Passthrough on NXP i.MX` container image provides a comprehensive envir
 | Component       | Specification      |
 |-----------------|--------------------|
 | Target Hardware | [Advantech EPC-R3720](https://www.advantech.com/en/products/880a61e5-3fed-41f3-bf53-8be2410c0f19/epc-r3720/mod_fde326be-b36e-4044-ba9a-28c4c49a25c6) |
-| SoC             | [NXP i.MX8MPlus](https://www.nxp.com/products/IMX8MPLUS?tab=Documentation_Tab)   |
+| SoC             | [NXP i.MX8MPlus](https://www.nxp.com/products/i.MX8MPLUS)   |
 | GPU             | Vivante GC7000UL       |
 | NPU             | Vivante GC7000UL       |
 | Memory          | 6 GB LPDDR4       |
