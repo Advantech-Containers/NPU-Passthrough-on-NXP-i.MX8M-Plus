@@ -35,7 +35,7 @@ The `NPU Passthrough on NXP i.MX` container image provides a comprehensive envir
 
 | Environment        | Operating System                                    |
 |--------------------|-----------------------------------------------------|
-| **Device Host**    | Yocto (5.15-kirkstone)                              |
+| **Device Host**    | Yocto 4.0 (LTS) (5.15-kirkstone)                              |
 | **Container**      | Ubuntu:22.04                                        |
 
 
